@@ -2,7 +2,7 @@ FROM armbuild/debian:jessie
 MAINTAINER ildeon
 
 RUN apt-get update &&\
-    apt-get install git-core libffi-dev libssl-dev zlib1g-dev libxslt1-dev libxml2-dev python python-pip python-dev build-essential -y
+    apt-get install unrar-free git-core libffi-dev libssl-dev zlib1g-dev libxslt1-dev libxml2-dev python python-pip python-dev build-essential -y
 
 RUN pip install lxml cffi cryptography pyopenssl --upgrade &&\
     adduser --system -shell "/bin/bash" --uid 1000 --disabled-password --group --home /var/lib/couchpotato couchpotato &&\
